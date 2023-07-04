@@ -10,7 +10,6 @@ const cors = require('cors')
 const  course = require("./routes/route")
 const  user = require("./routes/user");
 const  content = require("./routes/content");
-// const  topic = require("./routes/topic");
 const {connection } = require('./database/db');
 const errorHandler = require('./middleware/errorHandler');
 
@@ -52,11 +51,6 @@ app.post("/api/upload",upload.single("file"), (req, res)=>{
 app.use("/api/route",course );
 app.use("/api/user",user );
 app.use("/api/content",content );
-// app.use("/api/topic",topic );
-
-// app.get('/', (req, res) => {
-//   res.send('Hello World!')
-// })
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)

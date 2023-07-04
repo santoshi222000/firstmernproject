@@ -18,7 +18,6 @@ const registerUser = async (req, res) => {
       password: hashPassword,
       cpassword: hashPassword,
       userType: req.body.userType,
-      date : new Date(),
     });
 
     const newUser = await user.save();
